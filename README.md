@@ -12,13 +12,14 @@ ESP32 WhatsApp Messaging
 ### Here are the exact steps I used in order to get the code working as per the random nerd tutorial:
 1. First I had to add the CallMeBot phone number to my phone contacts.
 2. I then had to message this number through whats app, saying "I allow callmebot to send me messages"
-3. Afterwards I went to sketch, include library, manage libraries, and then I had to search for and install "URLEncode library" by Masayuki Sugahara as shown in the turorial.
-4. I then used random nerd's, (or Rui Santo's) sample code and put it into arduino.
-5. In the code, there are several bits you have to change (such as the SSID) so here's exactly what I had to add:
+3. The bot sends you an API key when you send it the allow message, so I had to write that down.
+4. Afterwards I had to open arduino, head over to sketch, include library, manage libraries, and then I had to search for and install "URLEncode library" by Masayuki Sugahara as shown in the turorial.
+5. I then used random nerd's, (or Rui Santo's) sample code and put it into arduino.
+6. In the code, there are several bits you have to change (such as the SSID) so here's exactly what I had to add:
    * My network SSID and Password
    * My phone number in interantional form
    * My API key that I recived after agreeing to be messaged by the CallMeBot API
    * And finally, I changed the message that I wanted to recieve to "Hello from ESP32 Cesar!".
-6. Now I'm done. Pressed upload, and there you go. My own chosen message sent to me through the CallMeBot API using the ESP32 Board!
+7. Now I'm done. Pressed upload, and there you go. My own chosen message sent to me through the CallMeBot API using the ESP32 Board!
 # Issues faced:
 * Thanfully I only faced one small simple issue. I accidently typed my phone number in the format of "xxx-xxx-xxxx", when the API needed it in international format, meaning that I had to add the +1 before the number. I just went back through the random nerd tutorial and found what I did wrong, that was all! Overall smooth sailing.
